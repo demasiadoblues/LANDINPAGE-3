@@ -1,18 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    overflow: hidden;
+
+body {
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    overflow-x: hidden;
 }
-a{
+
+a {
     text-decoration: none;
     color: aliceblue;
     text-transform: uppercase;
 }
-header{
+
+header {
     position: absolute;
     top: 0;
     left: 0;
@@ -21,47 +24,51 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 70px;
+    padding: 20px 50px;
 }
-.logo{
+
+.logo {
     text-transform: uppercase;
     font-size: 2rem;
     letter-spacing: 2px;
 }
-nav ul{
+
+nav ul {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
 }
-nav a{
+
+nav a {
     margin: 0 15px;
-    transition: color .4s ease;
+    transition: color 0.4s ease;
 }
-nav a:hover{
+
+nav a:hover {
     color: crimson;
 }
-.banner{
+
+.banner {
     position: relative;
     height: 100vh;
     width: 100%;
-    background: url(bg.jpg);
-    background-position: center center;
-    background-size: cover;
+    background: url(bg.jpg) no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    
 }
-.banner .content h4{
+
+.banner .content h4 {
     color: aliceblue;
     letter-spacing: 12px;
     text-transform: uppercase;
     font-size: 15px;
     font-weight: 300;
 }
-.banner .content h1{
+
+.banner .content h1 {
     font-size: 4rem;
     font-weight: 400;
     color: #ffffff;
@@ -69,13 +76,81 @@ nav a:hover{
     margin: 2rem 0;
     letter-spacing: 2px;
 }
-.btn{
+
+.btn {
     padding: 15px 30px;
     border-radius: 50px;
     background: crimson;
     margin-right: 10px;
-    transition: opacity .4s ease;
+    transition: opacity 0.4s ease;
 }
-.btn:hover{
-    opacity: .6;
+
+.btn:hover {
+    opacity: 0.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    header {
+        padding: 20px 40px;
+    }
+
+    .banner .content h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 15px 30px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .btn {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner .content h4 {
+        font-size: 12px;
+        letter-spacing: 8px;
+    }
+
+    .banner .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .banner .content h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
 }
